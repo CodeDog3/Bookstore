@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Register </title>
+  <link rel="stylesheet" href="/css">
+</head>
+
+<body class = "form">
+  <!--action value is important and used in defining routes-->
+  <form action="/register-server" method="post">
+    <div class="title">
+      <h3>Register</h3>
+    </div>
+    <div class="field">
+        <label>First Name:</label>
+        <!--name value is important and used with req.body-->
+        <input type="text" name="firstname" required/>
+        <br />
+    </div>
+    <div class="field">
+        <label>Last Name:</label>
+        <!--name value is important and used with req.body-->
+        <input type="text" name="lastname" required/>
+        <br />
+    </div>
+    <div class="field">
+        <label>Email:</label>
+        <!--name value is important and used with req.body-->
+        <input type="email" name="email" required/>
+        <br />
+    </div>
+    <div class="field">
+      <label>Zip Code:</label>
+      <!--name value is important and used with req.body-->
+      <input type="text" name="zipcode" required/>
+      <br />
+  </div>
+  <div class="field">
+    <label>Username:</label>
+    <!--name value is important and used with req.body-->
+    <input type="text" name="username" required/>
+    <br />
+  </div>
+    <div class="field">
+      <label>Password:</label>
+      <!--name value is important and used with req.body-->
+      <input type="password" name="password" required />
+    </div>
+    <br>
+    <div class="field">
+      <input class="submit-btn" type="submit" value="Submit" required />
+    </div>
+    <label id="error-message"></label>
+  </form>
+
+</body>
+</html>

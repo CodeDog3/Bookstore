@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Book Store
+        </title>
+        <link href="/css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b1aebe2bab.js" crossorigin="anonymous"></script>
+    </head>
+    <body>      
+
+        <div class="payment">
+            <i class="fa-regular fa-circle-xmark fa-xl"></i>
+            <form action="/purchase" method="post">
+                <div class="title">
+                  <h3>Payment info</h3>
+                </div>
+                <div class = "payment-info">
+                <h4>TOTAL: <span class="cart-total2">0</span></h4>
+                <div class="field">
+                    <label>Credit Card Number:</label>
+                    <br>
+                    <!--name value is important and used with req.body-->
+                    <input required type="text" name="card" />
+                    <br />
+                </div>
+                <div class="field">
+                    <label>Address:</label>
+                    <br>
+                    <!--name value is important and used with req.body-->
+                    <input required type="text" name="address" />
+                    <br />
+                </div>
+                <div class="hide">
+                    <!--name value is important and used with req.body-->
+                    <input type="text" name="pricing" id ="pricing" />
+                    <input type="text" name="books" id ="books" />
+                </div>
+                
+                <br>
+                <div class="field">
+                  <input class="submit-btn" type="submit" value="Submit" id="clearing-cart" required />
+                </div>
+                <label id="error-message"></label>
+              </form>
+            </div>
+        </div>
+        <div id = "cart">
+            <i class="fa-solid fa-chevron-left fa-2x"></i>
+            <h2>SHOPPING CART</h2>
+                <div id="cart-row">
+                    
+                    
+                </div>
+            <div id ="total">
+                <b>TOTAL:  <span class="cart-total">0</span></b>
+                <div class="submit-button">Checkout</div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+           <div class="navbar-center">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+
+            <div id="searchWrapper">
+                <input          
+                    type="text"
+                    name="searchBar"
+                    id="searchBar"
+                    placeholder="search for a book"
+                    
+                    
+                />
+                <i class="fa-solid fa-magnifying-glass" id="magnify" class="set-colors"></i>
+            </div>
+
+            <div class = "right-side">
+            <div class="cart-btn">
+                <span class="nav-icon">
+                    <i class="fa-solid fa-cart-arrow-down fa-lg" class="set-colors"></i>
+                </span>
+                <div class="cart-items">0</div>
+            </div>
+            <div id ="user"><i class="fa-solid fa-user fa-2x" class="set-colors"></i></div>
+            </div>
+            
+           </div> 
+        </nav>
+        <div class = "user-page">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+            <div class="section-info">
+            <h1><%=name%>'s Profile</h1>
+            <br><br><br><br><br>
+            <h4>First Name:</h4>
+            <%=name%>
+            <h4>Last Name:</h4>
+            <%=Lname%>
+            <h4>Username:</h4>
+            <%=Uname%>
+            <h4>Email:</h4>
+            <%=Ename%>
+            <h4>Zip-Code:</h4>
+            <%=zip%>
+        </div>
+        </div>
+
+        <main>
+            <div class="section-title">
+            <h2>Available Selection</h2>
+            <h4>Welcome <%=name%></h4>
+            </div>
+            <div class="products-center">
+                
+            </div>
+
+<!--  The order information must include: book titles in the cart, total price, credit card number, and user address. -->
+            
+        </main>
+
+        <footer>Book Store &copy; <a href= mailto:tdbrenna@milersville.edu>tdbrenna@millersville.edu</a> 
+            <p> Numeber of visits: <%= amount %></p>
+        </footer>
+        <script src="/storejs"></script>
+
+        
+
+
+        
+
+    </body>
+
+
+   
+    
+
+
+</html>

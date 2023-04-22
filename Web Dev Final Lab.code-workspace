@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Web Dev Final Lab",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Web Dev Final Lab"
+	}
+}
