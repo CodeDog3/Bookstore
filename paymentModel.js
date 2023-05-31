@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require("dotenv").config();
 //const passportLocalMongoose = require('passport-local-mongoose');
-mongoose.connect('mongodb+srv://admin:6OiNDUJcR3b5duYI@usersinfo.6mnzh1l.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://admin:'+process.env.PASSWORD+'@cluster0.e9kqskh.mongodb.net/?retryWrites=true&w=majority');
 
 const Schema = mongoose.Schema;
 

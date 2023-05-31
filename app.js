@@ -40,6 +40,7 @@ app.set("views", './');
 //     keys: ['key1', 'key2']
 //   }))
 
+
   app.get('/store', connectEnsureLogin.ensureLoggedIn(),  (req, res)=>{
     req.session.counter = (req.session.counter || 0) + 1;
     res.render('Webstore',{
@@ -107,26 +108,6 @@ app.set("views", './');
     res.redirect('/store')
     //localStorage.removeItem("cart");
   })
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   
   
